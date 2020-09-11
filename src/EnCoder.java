@@ -23,10 +23,15 @@ public class EnCoder
 		String encoded = "";
 		String combination = "";
 		
+		//ask user for text file name
+		Scanner kb = new Scanner (System.in);
+		System.out.print("What is the name of the text file? ");
+		String fileName = kb.next();
+		
 		try
 		{
 			// New File Reader for Text File
-			FileReader fr = new FileReader ( "text.txt" );
+			FileReader fr = new FileReader ( fileName );
 			
 			// New Buffered Reader to Read Text File
 			BufferedReader br = new BufferedReader ( fr );
